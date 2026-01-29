@@ -54,6 +54,8 @@ no streaks. no guilt. no optimization porn.
 
 just reflection and clarity.
 
+![system flow](docs/images/diagram-system-flow.png)
+
 ---
 
 ## what it tracks
@@ -90,6 +92,12 @@ instead of raw logs, the system stores facts like:
 * `no_environment_change`
 
 these are what the system reasons over.
+
+<p align="center">
+  <img src="docs/images/diagram-abstraction-ladder.png"
+       alt="abstraction ladder"
+       width="220" />
+</p>
 
 ---
 
