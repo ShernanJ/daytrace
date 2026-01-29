@@ -1,4 +1,4 @@
-# daytrace 🧭
+# daytrace 💭
 
 tracing *why* days feel productive or unproductive using passive signals and ontology-based reasoning.
 
@@ -8,27 +8,7 @@ it’s an attempt to understand how raw personal data turns into actual insight.
 
 ---
 
-## table of contents
-
-* [why this exists](#why-this-exists-)
-* [the problem](#the-problem-)
-* [the idea](#the-idea-)
-* [what it tracks](#what-it-tracks-)
-* [why ontologies](#why-ontologies-not-ml-first-)
-* [talking to your data](#talking-to-your-data-)
-* [architecture](#architecture-high-level-)
-* [scope](#scope-)
-* [tech](#tech-)
-* [what this project is (and isn’t)](#what-this-project-is-and-isn’t)
-* [philosophy](#philosophy-)
-* [status](#status-)
-* [license](#license)
-
----
-
-## why this exists 🤔
-
-[↑ back to top](#daytrace-)
+## why this exists
 
 i kept asking the same questions about my days and none of the apps helped.
 
@@ -44,9 +24,7 @@ daytrace exists to push one layer deeper , from *events* to *explanations*.
 
 ---
 
-## the problem ⚠️
-
-[↑ back to top](#daytrace-)
+## the problem
 
 most productivity apps feel fake.
 
@@ -60,9 +38,7 @@ meanwhile, your phone already captures a ton of signal , location, time, routine
 
 ---
 
-## the idea 💡
-
-[↑ back to top](#daytrace-)
+## the idea
 
 daytrace does three things:
 
@@ -80,9 +56,7 @@ just reflection and clarity.
 
 ---
 
-## what it tracks 📍
-
-[↑ back to top](#daytrace-)
+## what it tracks
 
 > strictly passive. zero user effort.
 
@@ -119,9 +93,7 @@ these are what the system reasons over.
 
 ---
 
-## why ontologies (not ml-first) 🧠
-
-[↑ back to top](#daytrace-)
+## why ontologies (not ml-first)
 
 ml is great at detecting patterns.
 
@@ -137,9 +109,7 @@ ml can come later.
 
 ---
 
-## talking to your data 💬
-
-[↑ back to top](#daytrace-)
+## talking to your data
 
 daytrace has a chat layer where you can ask questions like:
 
@@ -154,9 +124,7 @@ and get responses framed as **hypotheses**, not judgments:
 
 ---
 
-## architecture (high level) 🏗️
-
-[↑ back to top](#daytrace-)
+## architecture (high level)
 
 ```
 expo app (ios)
@@ -180,9 +148,7 @@ clarity > scale.
 
 ---
 
-## scope 🧪
-
-[↑ back to top](#daytrace-)
+## scope
 
 * passive signal collection
 * basic inference engine
@@ -192,9 +158,7 @@ clarity > scale.
 
 ---
 
-## tech 🛠️
-
-[↑ back to top](#daytrace-)
+## tech
 
 * expo / react native (ios-first)
 * typescript
@@ -211,8 +175,6 @@ this project explores what’s possible *without* that privileged access.
 
 ## what this project is (and isn’t)
 
-[↑ back to top](#daytrace-)
-
 this **is**:
 
 * a systems design exercise
@@ -227,9 +189,7 @@ this **is not**:
 
 ---
 
-## philosophy 🧘
-
-[↑ back to top](#daytrace-)
+## philosophy
 
 > data shouldn’t shame you.
 
@@ -237,16 +197,12 @@ data should help you notice patterns you couldn’t see before.
 
 ---
 
-## status 🚧
-
-[↑ back to top](#daytrace-)
+## status
 
 exploration project. intentionally rough.
 
 ---
 
 ## license
-
-[↑ back to top](#daytrace-)
 
 mit
