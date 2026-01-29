@@ -1,97 +1,95 @@
 # daytrace 💭
 
-tracing *why* days feel productive or unproductive using passive signals and ontology-based reasoning.
+tracing *why* days feel productive or unproductive by reasoning over passive signals using an explicit behavioral ontology.
 
-this is an **exploration project**, not a polished consumer app (yet , maybe later).
-
-it’s an attempt to understand how raw personal data turns into actual insight.
+focusing on abstracting raw personal data into higher-level explanations rather than just tracking it.
 
 ---
 
 ## why this exists
 
-i kept asking the same questions about my days and none of the apps helped.
+i kept asking the same questions about my days, and existing tools didn’t help.
 
-not "how many hours did i work?" but:
+not “how many hours did i work?”, but:
 
-* why did today feel heavy?
-* why do some busy days still feel empty?
-* why do my days usually fall apart after a certain point?
+- why did today feel heavy?
+- why do some busy days still feel empty?
+- why do my days tend to fall apart after a certain point?
 
-most tools stop at tracking.
+most productivity tools stop at tracking.
 
-daytrace exists to push one layer deeper , from *events* to *explanations*.
+daytrace exists to push one layer deeper — from *events* to *explanations*.
 
 ---
 
 ## the problem
 
-most productivity apps feel fake.
+many productivity apps rely on self-reporting, scores, or charts that don’t explain much.
 
-* they rely on self-reported input
-* they ask you how you feel every day
-* they show charts that don’t explain anything
+meanwhile, phones already emit a large amount of passive signal — time, location, routines, movement — but that data is rarely translated into meaning.
 
-meanwhile, your phone already captures a ton of signal , location, time, routines , but none of it gets translated into meaning.
-
-> what if you installed an app once… and it explained your day back to you?
+> what if you installed something once, and it explained your day back to you?
 
 ---
 
 ## the idea
 
-daytrace does three things:
+daytrace is built around three layers:
 
-1. collects **passive signals** from the phone
-2. converts those signals into **structured facts** using an ontology
-3. lets you **talk to those facts** through natural language
+1. collect **passive signals**
+2. abstract those signals into **structured facts** using an ontology
+3. reason over those facts to produce **explanations**
 
-there’s no self-reporting and no explicit productivity scoring.
+there is no self-reporting and no explicit productivity scoring.
 
-the goal isn’t to optimize your day , it’s to *understand it*.
-
-no streaks. no guilt. no optimization porn.
-
-just reflection and clarity.
+the goal isn’t optimization — it’s understanding.
 
 ![system flow](docs/images/diagram-system-flow.png)
 
 ---
 
-## what it tracks
+## what it observes
 
 > strictly passive. zero user effort.
+- passive signal collection
+- basic inference engine
+- ontology mapping layer
+
 
 ### raw signals
 
-* **time** (durations, routines, gaps)
-* **geolocation** (place changes, stays, transitions)
-* **health data** (movement, activity context , when available)
-* **gyro / motion** (to infer phone pickups vs ambient movement)
+- **time** (durations, routines, gaps)
+- **geolocation** (stays, transitions, environment changes)
+- **health context** (movement and activity signals, when available)
+- **motion / gyro** (to infer phone interaction vs ambient movement)
 
-> note: screen time apis are intentionally not used. they require special entitlements and app store deployment. since this is an exploration project, the goal is to see what can be inferred *without* that access.
+screen time apis are intentionally not used. they require special entitlements and app store deployment. this project explores what can be inferred *without* privileged access.
+
+---
 
 ### inferred events
 
-from raw signals, the system infers higher-level events such as:
+raw signals are converted into higher-level events such as:
 
-* home / work / cafe sessions
-* transitions between environments
-* long idle or low-movement blocks
-* probable phone pickup windows
+- home / work / cafe sessions
+- transitions between environments
+- extended idle or low-movement blocks
+- probable phone interaction windows
 
-these events are intentionally fuzzy. they’re inputs to reasoning, not ground truth.
+these events are intentionally fuzzy. they are inputs to reasoning, not ground truth.
+
+---
 
 ### semantic facts (ontology layer)
 
-instead of raw logs, the system stores facts like:
+instead of storing raw logs, the system stores semantic facts like:
 
-* `late_start`
-* `long_midday_break`
-* `worked_from_home(morning)`
-* `no_environment_change`
+- `late_start`
+- `long_midday_break`
+- `worked_from_home(morning)`
+- `no_environment_change`
 
-these are what the system reasons over.
+these facts form the basis for reasoning and explanation.
 
 <p align="center">
   <img src="docs/images/diagram-abstraction-ladder.png"
@@ -103,15 +101,14 @@ these are what the system reasons over.
 
 ## why ontologies (not ml-first)
 
-ml is great at detecting patterns.
+ml is effective at pattern detection under sufficient supervision.
 
 ontologies are better at:
+- expressing meaning
+- making reasoning explicit
+- allowing llms to explain *using structure*
 
-* expressing meaning
-* making reasoning explicit
-* letting llms explain *using structure*
-
-this project is about understanding the system first.
+this project prioritizes understanding and debuggability first.
 
 ml can come later.
 
@@ -119,16 +116,18 @@ ml can come later.
 
 ## talking to your data
 
-daytrace has a chat layer where you can ask questions like:
+daytrace includes a chat layer where you can ask questions like:
 
 > why did yesterday feel unproductive?
 
-and get responses framed as **hypotheses**, not judgments:
+responses are framed as **hypotheses**, not judgments:
 
-* started later than baseline
-* long idle block mid-day
-* stayed in the same environment most of the day
-* pattern matches previous low-energy days
+- started later than baseline
+- long idle block mid-day
+- minimal environment change
+- pattern matches previous low-energy days
+
+the goal is reflection, not scoring.
 
 ---
 
