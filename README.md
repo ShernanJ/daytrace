@@ -130,6 +130,8 @@ and get responses framed as **hypotheses**, not judgments:
 * stayed in the same environment most of the day
 * pattern matches previous low-energy days
 
+![reasoning flow](docs/images/diagram-reasoning-flow.png)
+
 ---
 
 ## architecture (high level)
